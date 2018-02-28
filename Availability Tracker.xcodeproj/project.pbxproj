@@ -13,7 +13,7 @@
 		38AC8A9F1E5FEDF3004E0FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AC8A9D1E5FEDF3004E0FF7 /* Main.storyboard */; };
 		38AC8AA11E5FEDF3004E0FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AC8AA01E5FEDF3004E0FF7 /* Assets.xcassets */; };
 		38AC8AA41E5FEDF3004E0FF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AC8AA21E5FEDF3004E0FF7 /* LaunchScreen.storyboard */; };
-		5BF2A1ED201513F40062ECA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BF2A1EC201513F40062ECA7 /* GoogleService-Info.plist */; };
+		42701A95204681FA00EBD76D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42701A94204681F900EBD76D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		38AC8AA01E5FEDF3004E0FF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38AC8AA31E5FEDF3004E0FF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38AC8AA51E5FEDF3004E0FF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BF2A1EC201513F40062ECA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42701A94204681F900EBD76D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECF9B6A5F7393F6D9E360971 /* Pods_Availability_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Availability_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,8 +74,8 @@
 				38AC8A991E5FEDF3004E0FF7 /* AppDelegate.swift */,
 				38AC8A9B1E5FEDF3004E0FF7 /* ViewController.swift */,
 				38AC8A9D1E5FEDF3004E0FF7 /* Main.storyboard */,
-				5BF2A1EC201513F40062ECA7 /* GoogleService-Info.plist */,
 				38AC8AA01E5FEDF3004E0FF7 /* Assets.xcassets */,
+				42701A94204681F900EBD76D /* GoogleService-Info.plist */,
 				38AC8AA21E5FEDF3004E0FF7 /* LaunchScreen.storyboard */,
 				38AC8AA51E5FEDF3004E0FF7 /* Info.plist */,
 			);
@@ -154,8 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42701A95204681FA00EBD76D /* GoogleService-Info.plist in Resources */,
 				38AC8AA41E5FEDF3004E0FF7 /* LaunchScreen.storyboard in Resources */,
-				5BF2A1ED201513F40062ECA7 /* GoogleService-Info.plist in Resources */,
 				38AC8AA11E5FEDF3004E0FF7 /* Assets.xcassets in Resources */,
 				38AC8A9F1E5FEDF3004E0FF7 /* Main.storyboard in Resources */,
 			);
@@ -185,9 +185,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Availability Tracker/Pods-Availability Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -200,13 +207,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Availability Tracker-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -344,7 +354,7 @@
 				DEVELOPMENT_TEAM = S2C8988WQX;
 				INFOPLIST_FILE = "Availability Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "abhi.Availability-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "citrus-circuits.availability-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -358,7 +368,7 @@
 				DEVELOPMENT_TEAM = S2C8988WQX;
 				INFOPLIST_FILE = "Availability Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "abhi.Availability-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "citrus-circuits.availability-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
