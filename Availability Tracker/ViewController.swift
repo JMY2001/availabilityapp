@@ -52,16 +52,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 
-    @IBAction func confirmScouts() {
-        let alert = UIAlertController(title: "Are you sure you want to confirm?", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(a) in
-            self.scoutsDB.reference().child("availabilityUpdated").setValue(1)
+    @IBAction func deleteScouts() {
+        let alert = UIAlertController(title: "Delete Scout", message: "Who do you want to delete?", preferredStyle: .alert)
+        alert.addTextField()
+        alert.addAction(UIAlertAction(title: "Remove", style: .default, handler: {(byeBoi) in
+            self.scoutsDB.reference().child("availability").child(alert.textFields![0].text!).setValue(nil)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         view.window?.rootViewController?.present(alert, animated: true, completion: nil)
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
