@@ -13,7 +13,7 @@
 		38AC8A9F1E5FEDF3004E0FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AC8A9D1E5FEDF3004E0FF7 /* Main.storyboard */; };
 		38AC8AA11E5FEDF3004E0FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AC8AA01E5FEDF3004E0FF7 /* Assets.xcassets */; };
 		38AC8AA41E5FEDF3004E0FF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AC8AA21E5FEDF3004E0FF7 /* LaunchScreen.storyboard */; };
-		5B3458F320717C2700DA46A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B3458F220717C2700DA46A9 /* GoogleService-Info.plist */; };
+		5B00065420865E5500BCCED1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B00065320865E5500BCCED1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		38AC8AA01E5FEDF3004E0FF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38AC8AA31E5FEDF3004E0FF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38AC8AA51E5FEDF3004E0FF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B3458F220717C2700DA46A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B00065320865E5500BCCED1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECF9B6A5F7393F6D9E360971 /* Pods_Availability_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Availability_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 				38AC8A9B1E5FEDF3004E0FF7 /* ViewController.swift */,
 				38AC8A9D1E5FEDF3004E0FF7 /* Main.storyboard */,
 				38AC8AA01E5FEDF3004E0FF7 /* Assets.xcassets */,
-				5B3458F220717C2700DA46A9 /* GoogleService-Info.plist */,
+				5B00065320865E5500BCCED1 /* GoogleService-Info.plist */,
 				38AC8AA21E5FEDF3004E0FF7 /* LaunchScreen.storyboard */,
 				38AC8AA51E5FEDF3004E0FF7 /* Info.plist */,
 			);
@@ -155,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38AC8AA41E5FEDF3004E0FF7 /* LaunchScreen.storyboard in Resources */,
-				5B3458F320717C2700DA46A9 /* GoogleService-Info.plist in Resources */,
+				5B00065420865E5500BCCED1 /* GoogleService-Info.plist in Resources */,
 				38AC8AA11E5FEDF3004E0FF7 /* Assets.xcassets in Resources */,
 				38AC8A9F1E5FEDF3004E0FF7 /* Main.storyboard in Resources */,
 			);
